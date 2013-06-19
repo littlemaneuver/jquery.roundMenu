@@ -5,4 +5,4 @@
  * Time: 11:27
  * To change this template use File | Settings | File Templates.
  */
-$("#left-menu ul").roundMenu({radius: 700});
+$("#left-menu ul").roundMenu({radius: 800});

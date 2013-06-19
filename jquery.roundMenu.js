@@ -16,13 +16,26 @@
                 height = _self.height() + position.top,
                 width = _self.width() + position.left,
                 childrenCount = children.length,
-                centerX = width/4 + r,
-                centerY = height/ 2,
+                centerX,
+                centerY,
+                angleRange,
+                angleStep;
+            if (config.position === 'vertical') {
+                centerX = width/4 + r;
+                centerY = height/ 2;
                 angleRange = {
                     max: Math.PI - Math.atan(Math.abs(position.top - centerY)/r),
                     min: Math.PI + Math.atan(Math.abs(height - centerY)/r)
-                },
-                angleStep = (angleRange.max - angleRange.min - config.angleCorrection * Math.PI / 180) / (childrenCount +1);
+                };
+            } else {
+                centerX = width/2;
+                centerY =  r;
+                angleRange = {
+                    max: Math.PI * 3/2 + Math.atan(Math.abs(position.left - centerX)/r),
+                    min: Math.PI * 3/2 - Math.atan(Math.abs(width - centerX)/r)
+                };
+            }
+            angleStep = (angleRange.max - angleRange.min - config.angleCorrection * Math.PI / 180) / (childrenCount + 1);
             return {
                 centerX: centerX,
                 centerY: centerY,
@@ -39,7 +52,7 @@
         var buildMenu = function (coords) {
             var childWidth,
                 childHeight,
-                startPos = coords.angleRange.min /*+ coords.angleCorrection / 2*/,
+                startPos = coords.angleRange.min + coords.angleStep + coords.angleCorrection / 2,
                 x, y;
             $.each(children, function (i, child) {
                 child = $(child);
@@ -61,7 +74,7 @@
         var init = function () {
             var defaults = {
                 radius: 3000,
-                vertical: true,
+                position: 'vertical',
                 angleCorrection: 4
             };
             config = $.extend({}, defaults, config);
