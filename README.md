@@ -1,4 +1,4 @@
-#Jquery RoundMenu plugin
+#jQuery.roundMenu plugin
 #Usage
 ```javascript
 $('menu-selector').roundMenu({
