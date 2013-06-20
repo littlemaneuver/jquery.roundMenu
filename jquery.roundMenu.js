@@ -80,10 +80,9 @@
             config = $.extend({}, defaults, config);
             var coords = calcRadians(config);
             _self.css('position', 'relative');
-            console.log(coords)
             buildMenu(coords);
         };
-        console.log(init(config));
+        init(config);
         return _self;
     }
 }) (jQuery, window.document)
