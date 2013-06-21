@@ -1,0 +1,32 @@
+{
+    "name": "roundMenu",
+    "title": "jQuery roundMenu",
+    "description": "jQuery plugin for making children of selected element curved on initiated radius.",
+    "keywords": [
+        "arc",
+        "curve",
+        "round"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "Anton Savchenko"
+    },
+    "maintainers": [
+        {
+            "name": "Anton Savchenko",
+            "email": "antonio.puero@gmail.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/antoniopuero/jquery.roundMenu/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/antoniopuero/jquery.roundMenu/issues",
+    "homepage": "https://github.com/antoniopuero/jquery.roundMenu",
+    "docs": "https://github.com/antoniopuero/jquery.roundMenu",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
