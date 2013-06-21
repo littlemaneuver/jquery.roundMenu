@@ -59,8 +59,8 @@
                 x = Math.round(coords.r * Math.cos(startPos) + coords.centerX);
                 y = Math.round(coords.r * Math.sin(startPos) + coords.centerY);
                 child.css('position', 'absolute');
-                childWidth = child.width();
-                childHeight = child.height();
+//                childWidth = child.width();
+//                childHeight = child.height();
                 child.css({
                     top: y - coords.position.top /*- childHeight/2*/,
                     left: x - coords.position.left /*- childWidth/2*/,
