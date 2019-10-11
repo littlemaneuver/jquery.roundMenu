@@ -1,6 +1,6 @@
 # jQuery.roundMenu plugin
 
-# Usage
+## Usage
 ```javascript
 $('menu-selector').roundMenu({
     radius: 800, //optional, default 2000
